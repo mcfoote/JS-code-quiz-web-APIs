@@ -1,0 +1,28 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.gameWindow {
+
+    border: 2px solid rgb(104, 8, 104);
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    height: 600px;
+    width: 600px;
+    
+}
+
+#timer {
+    
+    color: white;
+    background-color: rgb(104, 8, 104);
+    margin-left: 33%;
+    padding: 16px 32px;
+    font-size: 22px;
+
+}
+
+.questions {
+    margin: 22px;
+}
