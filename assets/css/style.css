@@ -2,7 +2,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.gameWindow {
+#gameWindow {
 
     border: 2px solid rgb(104, 8, 104);
     position: absolute;
@@ -23,6 +23,6 @@
 
 }
 
-.questions {
+#questions {
     margin: 22px;
 }
