@@ -4,7 +4,7 @@ var score = 0;
 
 var current = document.querySelector("#timer");
 var start = document.querySelector("#start"); 
-var questions = document.querySelector("#questions"); 
+var questionsEl = document.querySelector("#questions"); 
 var gameWindow = document.querySelector("#gameWindow"); 
 
 var timeLeft = 121;
@@ -85,21 +85,21 @@ start.addEventListener("click", function () {
 //Renderer Function
 function render(qIndex) {
     
-    questions.innerHTML = "";
+    questionsEl.innerHTML = "";
     ulNew.innerHTML = "";
    
     for (var i = 0; i < questions.length; i++) {
    
         var userQ = questions[qIndex].title;
         var userAnswer = questions[qIndex].choices;
-        questions.textContent = userQ;
+        questionsEl.textContent = userQ;
 
     }
     
     userAnswer.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
-        questions.appendChild(ulNew);
+        questionsEl.appendChild(ulNew);
         ulNew.appendChild(listItem);
         listItem.addEventListener("click", (check));
     })
@@ -126,7 +126,7 @@ function check(event) {
         }
 
     }
-    
+
     qIndex++;
 
     if (qIndex >= questions.length) {
@@ -136,14 +136,14 @@ function check(event) {
     } else {
         render(qIndex);
     }
-    questions.appendChild(newDiv);
+    questionsEl.appendChild(newDiv);
 
 }
 
 //
 function finished() {
 
-    questions.innerHTML = "";
+    questionsEl.innerHTML = "";
     current.innerHTML = "";
 
     
@@ -151,13 +151,13 @@ function finished() {
     newH1.setAttribute("id", "newH1");
     newH1.textContent = "Finished"
 
-    questions.appendChild(newH1);
+    questionsEl.appendChild(newH1);
 
     
     var newPara = document.createElement("p");
     newPara.setAttribute("id", "newPara");
 
-    questions.appendChild(newPara);
+    questionsEl.appendChild(newPara);
 
     
     if (timeLeft >= 0) {
@@ -167,7 +167,7 @@ function finished() {
         clearInterval(hold);
         newPara.textContent = "Your final score is: " + remaining;
 
-        questions.appendChild(newPara2);
+        questionsEl.appendChild(newPara2);
 
     }
 
@@ -175,21 +175,21 @@ function finished() {
     newLabel.setAttribute("id", "newLabel");
     newLabel.textContent = "Enter your initials: ";
 
-    questions.appendChild(newLabel);
+    questionsEl.appendChild(newLabel);
 
     var newInput = document.createElement("input");
     newInput.setAttribute("type", "text");
     newInput.setAttribute("id", "initials");
     newInput.textContent = "";
 
-    questions.appendChild(newInput);
+    questionsEl.appendChild(newInput);
 
     var newSubmit = document.createElement("button");
     newSubmit.setAttribute("type", "submit");
     newSubmit.setAttribute("id", "Submit");
     newSubmit.textContent = "Submit";
 
-    questions.appendChild(newSubmit);
+    questionsEl.appendChild(newSubmit);
 
     newSubmit.addEventListener("click", function () {
         var initials = newInput.value;
@@ -218,7 +218,7 @@ function finished() {
             var newScore = JSON.stringify(playerScores);
             localStorage.setItem("playerScores", newScore);
            
-            window.location.replace("./Scores.html");
+            window.location.replace("./assets/html/Scores.html");
 
         }
     });
