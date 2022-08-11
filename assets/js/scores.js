@@ -5,20 +5,7 @@ var highScore = document.querySelector('#highScore');
 var userScores = localStorage.getItem("userScores");
 userScores = JSON.parse(userScores);
 
-
-back.addEventListener('click', function() {
-
-    window.location.replace('./index.html');
-
-});
-
-clear.addEventListener("click", function () {
-
-    localStorage.clear();
-    location.reload();
-    
-});
-
+//check that user scores is not empty
 if (userScores !== null) {
 
     for (var i = 0; i < userScores.length; i++) {
@@ -29,6 +16,21 @@ if (userScores !== null) {
 
     }
 }
+
+back.addEventListener('click', function() {
+
+    window.location.replace('../../index.html');
+
+});
+
+clear.addEventListener("click", function () {
+
+    localStorage.clear();
+    location.reload();
+
+});
+
+
 
 
 
