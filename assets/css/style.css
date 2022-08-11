@@ -1,7 +1,7 @@
 * {
 
     font-family: 'Times New Roman', Times, serif;
-    
+
 }
 
 #gameWindow {
@@ -114,6 +114,7 @@ li {
 
     background-color: rgb(104, 8, 104);
     color: white;
+    border-radius: 10px;
     margin-top: 10px;
     padding: 5px 15px;
     width: 80%;

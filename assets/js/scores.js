@@ -2,16 +2,16 @@ var clear = document.querySelector('#clear');
 var back = document.querySelector('#back');
 var highScore = document.querySelector('#highScore');
 
-var userScores = localStorage.getItem("userScores");
-userScores = JSON.parse(userScores);
+var playerScores = localStorage.getItem("playerScores");
+playerScores = JSON.parse(playerScores);
 
 //check that user scores is not empty
-if (userScores !== null) {
+if (playerScores !== null) {
 
-    for (var i = 0; i < userScores.length; i++) {
+    for (var i = 0; i < playerScores.length; i++) {
 
         var createLi = document.createElement("li");
-        createLi.textContent = userScores[i].initials + " " + userScores[i].score;
+        createLi.textContent = playerScores[i].initials + " " + playerScores[i].score;
         highScore.appendChild(createLi);
 
     }
