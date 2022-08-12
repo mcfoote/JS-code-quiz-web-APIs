@@ -175,6 +175,12 @@ li:hover {
 
 }
 
+#highScore li {
+
+    background-color: gray;
+    
+}
+
 #newDiv {
 
     margin-top: 22px;
