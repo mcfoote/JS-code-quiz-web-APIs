@@ -6,6 +6,7 @@
 
 #gameWindow {
 
+    border-radius: 10px;
     border: 2px solid rgb(104, 8, 104);
     position: absolute;
     left: 30%;
@@ -17,6 +18,7 @@
 
 #wrapper {
 
+    border-radius: 10px;
     border: 2px solid rgb(104, 8, 104);
     position: absolute;
     left: 30%;
@@ -34,6 +36,7 @@ p {
 
 #timer {
     
+    border-radius: 10px;
     color: white;
     background-color: rgb(104, 8, 104);
     margin-left: 33%;
@@ -62,7 +65,7 @@ p {
     padding: 10px;
     font-size: 20px;
     top: 30%;
-    left: 55%;
+    left: 50%;
     width: auto;
     text-align: center;
     text-decoration: none;
