@@ -145,6 +145,12 @@ li {
 
 }
 
+li:hover {
+
+    background-color: pink;
+    
+}
+
 #newDiv {
 
     margin-top: 22px;
