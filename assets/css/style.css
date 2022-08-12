@@ -72,6 +72,12 @@ p {
 
 }
 
+#back:hover {
+
+    background-color: pink;
+    
+}
+
 
 
 #clear {
@@ -87,10 +93,22 @@ p {
 
 }
 
+#clear:hover {
+
+    background-color: pink;
+    
+}
+
 button {
 
     border-radius: 8px;
     font-size: 24px;
+
+}
+
+button:hover {
+
+    background-color: pink;
 
 }
 
@@ -109,6 +127,12 @@ textarea {
     padding: 15px 32px;
     font-size: 20px;
 
+}
+
+#Submit:hover {
+
+    background-color: pink;
+    
 }
 
 label {
@@ -148,7 +172,7 @@ li {
 li:hover {
 
     background-color: pink;
-    
+
 }
 
 #newDiv {
