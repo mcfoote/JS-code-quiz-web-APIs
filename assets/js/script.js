@@ -117,12 +117,12 @@ function check(event) {
          
         if (element.textContent == questions[qIndex].answer) {
             score++;
-            newDiv.textContent = "Correct! The answer is:  " + questions[qIndex].answer;
+            newDiv.textContent = "Correct! :  " + questions[qIndex].answer + "Is the correct answer.";
             
         } else {
             
             timeLeft -= penalty;
-            newDiv.textContent = "Wrong! The correct answer is:  " + questions[qIndex].answer;
+            newDiv.textContent = "Incorrect! The correct answer is:  " + questions[qIndex].answer;
         }
 
     }
@@ -132,7 +132,7 @@ function check(event) {
     if (qIndex >= questions.length) {
         
         finished();
-        newDiv.textContent = "End of quiz!" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+        newDiv.textContent = "Quiz Complete!" + " " + "Your score is  " + score + "/" + questions.length + " Correct.";
     } else {
         render(qIndex);
     }
@@ -140,7 +140,7 @@ function check(event) {
 
 }
 
-//
+//Game finisher function outputs score and takes in initials, saves score to local storage.
 function finished() {
 
     questionsEl.innerHTML = "";
@@ -165,7 +165,7 @@ function finished() {
         var remaining = timeLeft;
         var newPara2 = document.createElement("p");
         clearInterval(hold);
-        newPara.textContent = "Your final score is: " + remaining;
+        newPara.textContent = "Final score is: " + remaining;
 
         questionsEl.appendChild(newPara2);
 
@@ -196,7 +196,7 @@ function finished() {
 
         if (initials === null) {
 
-            console.log("No value entered!");
+            console.log("No initials entered!");
 
         } else {
 
